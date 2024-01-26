@@ -1,0 +1,23 @@
+[
+    {
+        "news_img": "https://i.ibb.co/YZhw5NQ/1.png",
+        "news_title": "Bayern Slams Authorities Over Flight Delay to Club World Cup",
+        "news_catagory": "Sports",
+        "published_date": "2022-01-04 17:27:34",
+        "Id": "1"
+    },
+    {
+        "news_img": "https://i.ibb.co/vBZ5qCx/2.png",
+        "news_title": "Bayern Slams Authorities Over Flight Delay to Club World Cup",
+        "news_catagory": "Sports",
+        "published_date": "2022-01-04 17:27:34",
+        "Id": "2"
+    },
+    {
+        "news_img": "https://i.ibb.co/gjSNrQY/3.png",
+        "news_title": "Bayern Slams Authorities Over Flight Delay to Club World Cup",
+        "news_catagory": "Sports",
+        "published_date": "2022-01-04 17:27:34",
+        "Id": "3"
+    }
+]

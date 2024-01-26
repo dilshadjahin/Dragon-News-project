@@ -7,3 +7,10 @@
 body{
     font-family: 'Poppins', sans-serif;
   }
+
+.leftSide  .activeLink {
+  background-color: rgb(198, 201, 201);
+}
+.style-module_emptyIcons__Bg-FZ{
+  display: flex !important;
+}

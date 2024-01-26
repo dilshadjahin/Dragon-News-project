@@ -1,5 +1,6 @@
 import Header from "../Shared/Header/Header";
 import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
+import MiddleNav from "../Shared/MiddleNav/MiddleNav";
 import Navbar from "../Shared/Navbar/Navbar";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 import BreakingNews from "./BreakingNews";
@@ -17,7 +18,8 @@ const Home = () => {
                     <LeftSideNav/>
                 </div>
                 <div className="lg:col-span-2 border">
-                    <h2 className="text-4xl">News comming soon</h2>
+                    <MiddleNav/>
+                    {/* <h2 className="text-4xl">News comming soon</h2> */}
 
                 </div>
                 <div className="border">
