@@ -93,8 +93,8 @@ const MiddleNav = () => {
 
                     {/*  */}
 
-                    <h2 className="text-lg font-semibold my-4"> {latestNewses.title}</h2>
-                    <img src={latestNewses.image_url} alt="" />
+                    <Link onClick={incrementViewerCount} ><h2  className="text-lg font-semibold my-4"> {latestNewses.title}</h2></Link>
+                    <img src={latestNewses.image_url} alt="" onClick={incrementViewerCount} />
 
                     {/* condition apply */}
 
@@ -102,7 +102,7 @@ const MiddleNav = () => {
                     {
                       latestNewses.details.length > 200 ?  
                        <p className="text-justify mt-6">{latestNewses.details.slice(0,200)} 
-                       <Link to={`/news/${latestNewses._id}`} className="text-[#FF8C47] font-semibold text-lg" >Read More</Link>
+                       <Link to={`/news/${latestNewses.id}`} className="text-[#FF8C47] font-semibold text-lg mx-2" >Read More</Link>
                       </p>
 
                       : <p>{latestNewses.details}</p>
@@ -111,7 +111,7 @@ const MiddleNav = () => {
 
                    
 
-                    <button onClick={incrementViewerCount} className="text-[#FF8C47] font-semibold text-lg">Read More</button>
+                    {/* <button  className="text-[#FF8C47] font-semibold text-lg">Read More</button> */}
 
                     {/* ratings */}
 

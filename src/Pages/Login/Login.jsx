@@ -1,14 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
 
-    const {signIn} = useContext(AuthContext);
 
-    const handleLogin = e =>{
+
+    const { signIn } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate()
+    console.log(location);
+
+
+    const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
@@ -17,13 +25,20 @@ const Login = () => {
         // sign in 
 
         signIn(email, password)
-        .then(result =>{
-            console.log(result.user);
+            .then(result => {
 
-        })
-        .catch(error  =>{
-            console.error(error);
-        })
+                console.log('login', result.user);
+
+                // navigate after login
+                navigate('/');
+
+            })
+            .catch(error => {
+                console.error(error);
+                toast('email & password invalid')
+
+
+            })
 
     }
     return (
@@ -34,7 +49,7 @@ const Login = () => {
 
 
                 <div className="card shrink-0   shadow-2xl bg-base-100 w-[620px] px-10 h-[500px]">
-                    <form  onSubmit={handleLogin} className="card-body rounded-none ">
+                    <form onSubmit={handleLogin} className="card-body rounded-none ">
 
                         <h2 className="text-2xl font-semibold text-center my-4">Login your account</h2>
                         <hr />
@@ -60,6 +75,7 @@ const Login = () => {
                     </form>
                 </div>
 
+                <ToastContainer />
             </div>
 
 
